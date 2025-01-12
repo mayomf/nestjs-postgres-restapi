@@ -29,8 +29,7 @@ export class UsersService {
   }
 
   findOneByEmail(email: string) {
-    return this.usersRepository.findOneByOrFail({email})
-    .catch((error) => {throw new HttpException(`${email} was Not Found`, 404)});  
+    return this.usersRepository.findOneBy({email});  
   
   }
 
