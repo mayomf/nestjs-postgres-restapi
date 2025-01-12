@@ -30,7 +30,6 @@ export class UsersService {
 
   findOneByEmail(email: string) {
     return this.usersRepository.findOneBy({email});  
-  
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
